@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+
+
+    <Spinner
+        android:id="@+id/albumSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_alignParentTop="true"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/albumSpinner"
+        android:fillViewport="true"
+
+        >
+
+<!--        <GridLayout-->
+<!--            android:id="@+id/gridLayout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:columnCount="3"-->
+<!--            android:padding="10dp"-->
+<!--            android:useDefaultMargins="true" >-->
+<!--        </GridLayout>-->
+
+        <com.nex3z.flowlayout.FlowLayout
+            android:id="@+id/flowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flChildSpacing="auto"
+            >
+
+        </com.nex3z.flowlayout.FlowLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
